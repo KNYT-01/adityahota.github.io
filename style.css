@@ -305,3 +305,39 @@ footer {
     padding: 80px 6%;
   }
 }
+/* ===== FIX: IMAGE DIMENSIONS (PROJECT + HOBBIES) ===== */
+
+/* IoT Project Section */
+.proj-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* If there's a group photo, it scales properly side by side */
+.project-box {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+  text-align: center;
+}
+
+/* Hobby images — uniform size and spacing */
+.hobby-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.hobby-img:hover {
+  transform: scale(1.02);
+}
