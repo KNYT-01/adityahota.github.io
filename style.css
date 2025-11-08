@@ -6,15 +6,13 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #0e1118;
-  color: #e5e5e5;
+  background: radial-gradient(circle at 20% 20%, #1b1a2e, #0e0c18);
+  color: #eaeaea;
   scroll-behavior: smooth;
   line-height: 1.6;
 }
 
-:root {
-  --accent: #00ffd5;
-}
+:root { --accent: #8effd0; }
 
 html {
   scroll-behavior: smooth;
