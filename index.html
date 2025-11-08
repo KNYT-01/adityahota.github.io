@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero hero-animate">
+    <div class="hero-left">
+      <h1><span class="hi">Hi,</span> I’m <span class="name">Aditya</span>!</h1>
+      <p class="intro">
+        I am a first year Integrated M.Tech Geological Technology student at IIT Roorkee.<br>
+        I’m a swimmer, coder, and blockchain enthusiast.<br>
+        I am also into IoT based systems.
+      </p>
+    </div>
+    <div class="hero-right">
+      <img src="images/profile.jpg" alt="Aditya" class="profile-img">
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about fade-in">
+    <h2>About Me</h2>
+    <p>
+      I love exploring technology that connects the physical and digital worlds.
+      Whether it’s designing IoT systems, learning blockchain, or solving C++ problems,
+      I enjoy building things that make a difference.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>C++</h3><div class="bar"><div class="fill cpp"></div></div></div>
+      <div class="skill-card"><h3>Python</h3><div class="bar"><div class="fill python"></div></div></div>
+      <div class="skill-card"><h3>Solidity</h3><div class="bar"><div class="fill solidity"></div></div></div>
+      <div class="skill-card"><h3>HTML</h3><div class="bar"><div class="fill html"></div></div></div>
+      <div class="skill-card"><h3>CSS</h3><div class="bar"><div class="fill css"></div></div></div>
+    </div>
+  </section>
+
+  <!-- IOT PROJECT -->
+  <section id="iot" class="section iot fade-in">
+    <h2>IoT Based Projects</h2>
+    <div class="project-box">
+      <img src="images/rain-gauge.jpg" alt="Rain Gauge Project" class="proj-img">
+      <div class="proj-text">
+        <h3>Rain Gauge IoT System</h3>
+        <p>
+          An Arduino-based tipping bucket rain gauge with an I²C LCD display.
+          Measures rainfall intensity, detects tip speed, and auto-resets daily.
+        </p>
+        <img src="images/group.jpg" alt="Group photo" class="group-photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- SWIMMING -->
+  <section id="swimming" class="section swimming fade-in">
+    <h2>Swimming</h2>
+    <p>
+      I am an active swimmer and regularly train to improve my times.
+      <br><br>
+      <strong>My 50m freestyle time:</strong> 28.4 seconds (above-average competitive level)
+    </p>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies" class="section hobbies fade-in">
+    <h2>Hobbies</h2>
+    <div class="hobby-grid">
+      <div class="hobby-card">
+        <img src="images/soccer.jpg" alt="Soccer" class="hobby-img">
+        <h3>Soccer</h3>
+        <p>I love the strategy and adrenaline of soccer — it keeps me active, sharp, and team-oriented.</p>
+      </div>
+
+      <div class="hobby-card">
+        <img src="images/reading.jpg" alt="Reading" class="hobby-img">
+        <h3>Reading</h3>
+        <p>
+          I read to understand perspectives — from tech and philosophy to fiction that reshapes imagination.<br><br>
+          Some of my favorite books include the <strong>Harry Potter series</strong> and <strong>Malgudi Days</strong>.
+        </p>
+      </div>
+
+      <div class="hobby-card">
+        <img src="images/photography.jpg" alt="Photography" class="hobby-img">
+        <h3>Photography</h3>
+        <p>I enjoy capturing emotions and symmetry in everyday life — freezing moments that often go unnoticed.</p>
+      </div>
+
+      <div class="hobby-card">
+        <img src="images/cubing.jpg" alt="Cubing" class="hobby-img">
+        <h3>Cubing</h3>
+        <p>I haven’t reached competitive timings yet, but I’m working on it with consistent daily practice.</p>
+      </div>
+
+      <div class="hobby-card">
+        <img src="images/music.jpg" alt="Listening to Music" class="hobby-img">
+        <h3>Listening to Music</h3>
+        <p>Music helps me recharge — I enjoy exploring indie, lo-fi, and ambient genres while coding or relaxing.</p>
+      </div>
+
+      <div class="hobby-card">
+        <img src="images/oration.jpg" alt="Oration" class="hobby-img">
+        <h3>Oration</h3>
+        <p>I love expressing ideas through speech — whether it’s debating, hosting, or storytelling, I enjoy connecting with people through words.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact fade-in">
+    <h2>Contact Me</h2>
+    <p>Want to reach out? Drop me a message below 👇</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" disabled>Send Message (Coming Soon)</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Aditya — Crafted with 💧 & ⚡</p>
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
