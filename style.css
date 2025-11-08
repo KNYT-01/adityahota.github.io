@@ -6,13 +6,15 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at 25% 25%, #11192a, #060b16);
-  color: #e8ecf1;
+  background: radial-gradient(circle at 25% 25%, #1b1e24, #121418);
+  color: #e9ebf0;
   scroll-behavior: smooth;
   line-height: 1.6;
 }
 
-:root { --accent: #00c8ff; }
+:root {
+  --accent: #00f0c5; /* Soft neon teal glow */
+}
 
 
 html {
